@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  web:
+    image: nginx:1.10
+    ports:
+      - "80:80"
+    depends_on:
+      - php
+    volumes_from:
+      - php
+    command: nginx -c /var/www/html/config/nginx/nginx.conf
+
+  php:
+    build: config/php/
+    volumes:
+      - .:/var/www/html
