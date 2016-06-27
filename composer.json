@@ -1,17 +1,28 @@
 {
-    "name": "wambo/demo",
-    "description": "a demo store with the wambo system",
-    "type": "project",
-    "authors": [
-        {
-            "name": "Rene Penner",
-            "email": "rene@penner.name"
-        },
-        {
-            "name": "Andy Koch",
-            "email": "andyk7@gmail.com"
-        }
-    ],
-    "require": {
+  "name": "wambo/demo",
+  "description": "a demo store with the wambo system",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Rene Penner",
+      "email": "rene@penner.name",
+      "role": "Developer"
+    },
+    {
+      "name": "Andy Koch",
+      "email": "andyk7@gmail.com",
+      "role": "Developer"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Wambo\\": "app/src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": { "Wambo\\Tests\\": "app/tests" }
+  },
+  "require": {
+    "slim/slim": "^3.0"
+  }
 }
