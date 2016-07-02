@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6876d93157800a060250c910d226c697",
-    "content-hash": "7e03edb89eadd30082b4e9a64cde6cde",
+    "hash": "e3eed2e06a0e5c3cdb5aab18c394d1dc",
+    "content-hash": "e1908cb594117199e2fa0581482b954e",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -241,12 +241,79 @@
                 "router"
             ],
             "time": "2016-05-25 11:23:38"
+        },
+        {
+            "name": "wambo/module-composer-installer",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:wambo-enterprice/module-composer-installer.git",
+                "reference": "45f138a902612149b6268d4db34ccf1f1902651d"
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Wambo\\ComposerInstaller\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wambo\\ComposerInstaller\\": "src"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Rene Penner",
+                    "email": "rene@penner.name",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Andy Koch",
+                    "email": "andyk7@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "a test wambo module",
+            "time": "2016-07-02 12:27:17"
+        },
+        {
+            "name": "wambo/module-test",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:wambo-enterprice/wambo-module-test.git",
+                "reference": "e59512dd5d4f9229e164beca7ce0d8662d848430"
+            },
+            "type": "wambo-module",
+            "autoload": {
+                "psr-4": {
+                    "Wambo\\Test\\": "src"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Rene Penner",
+                    "email": "rene@penner.name",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Andy Koch",
+                    "email": "andyk7@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "a test wambo module",
+            "time": "2016-07-02 12:08:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "wambo/module-test": 20,
+        "wambo/module-composer-installer": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

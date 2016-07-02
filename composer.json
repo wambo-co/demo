@@ -23,6 +23,18 @@
     "psr-4": { "Wambo\\Tests\\": "app/tests" }
   },
   "require": {
-    "slim/slim": "^3.0"
-  }
+    "slim/slim": "^3.0",
+    "wambo/module-test": "dev-develop",
+    "wambo/module-composer-installer": "dev-develop"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "git@bitbucket.org:wambo-enterprice/module-composer-installer.git"
+    },
+    {
+      "type": "vcs",
+      "url":  "git@bitbucket.org:wambo-enterprice/wambo-module-test.git"
+    }
+  ]
 }
