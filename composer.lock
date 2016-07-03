@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e3eed2e06a0e5c3cdb5aab18c394d1dc",
-    "content-hash": "e1908cb594117199e2fa0581482b954e",
+    "hash": "46304c8e6fc3e44f5f4787f02d2fcb75",
+    "content-hash": "ba9eb711963ef569b915d6e3521737c9",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -243,41 +243,6 @@
             "time": "2016-05-25 11:23:38"
         },
         {
-            "name": "wambo/module-composer-installer",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:wambo-enterprice/module-composer-installer.git",
-                "reference": "45f138a902612149b6268d4db34ccf1f1902651d"
-            },
-            "require": {
-                "composer-plugin-api": "^1.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Wambo\\ComposerInstaller\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Wambo\\ComposerInstaller\\": "src"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Rene Penner",
-                    "email": "rene@penner.name",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Andy Koch",
-                    "email": "andyk7@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "a test wambo module",
-            "time": "2016-07-02 12:27:17"
-        },
-        {
             "name": "wambo/module-test",
             "version": "dev-develop",
             "source": {
@@ -305,6 +270,41 @@
             ],
             "description": "a test wambo module",
             "time": "2016-07-02 12:08:00"
+        },
+        {
+            "name": "wambo/wambo-composer-installer",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:wambo-enterprice/wambo-composer-installer.git",
+                "reference": "a7aecc88a79d7eddd7a755e05b0e5325c0c97143"
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Wambo\\ComposerInstaller\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wambo\\ComposerInstaller\\": "src"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Rene Penner",
+                    "email": "rene@penner.name",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Andy Koch",
+                    "email": "andyk7@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "a test wambo module",
+            "time": "2016-07-03 14:10:49"
         }
     ],
     "packages-dev": [],
@@ -312,7 +312,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "wambo/module-test": 20,
-        "wambo/module-composer-installer": 20
+        "wambo/wambo-composer-installer": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
