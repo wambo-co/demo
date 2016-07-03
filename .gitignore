@@ -1,3 +1,5 @@
 /vendor/
+/config/wambo/modules.json
+
 
 .idea

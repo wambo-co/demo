@@ -16,7 +16,7 @@ class Config
     /**
      * @var array
      */
-    private $modules;
+    private $modules = array();
 
 
     /**
@@ -24,7 +24,8 @@ class Config
      */
     public function __construct()
     {
-        $this->loadModules();
+        $this->loadModules('core_modules');
+        $this->loadModules('modules');
     }
 
     /**
@@ -40,9 +41,9 @@ class Config
      *
      * @throws Exception
      */
-    private function loadModules()
+    private function loadModules($scope)
     {
-        $modules_json_filename = $this->getConfigDir() . '/modules.json';
+        $modules_json_filename = $this->getConfigDir() . '/' . $scope . '.json';
 
         if ( !file_exists($modules_json_filename) ) {
             throw new Exception('modules file not found');
@@ -57,11 +58,12 @@ class Config
 
         // throw an Exception if something went wrong on json_decode
         if (json_last_error() !== JSON_ERROR_NONE) {
-            $msg = json_last_error_msg();
+            $msg = 'JSON decode Error: ' . json_last_error_msg();
             throw new Exception($msg);
         }
 
-        $this->modules = $modules;
+        $this->modules = array_merge($this->modules, $modules);
+        $this->modules = array_unique($this->modules, SORT_REGULAR);
     }
 
     /**
