@@ -24,6 +24,7 @@
   },
   "require": {
     "slim/slim": "^3.0",
+    "slim/php-view": "2.1.0",
     "wambo/module-test": "dev-develop",
     "wambo/wambo-composer-installer": "dev-develop"
   },
