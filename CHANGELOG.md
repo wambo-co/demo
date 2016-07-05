@@ -10,3 +10,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Add Slim3 (http://www.slimframework.com/) to composer
 - Add Core src and tests folder and autoload config in composer.json
 - Add Hello Wambo Module with route for '/'
+- Ignore the composer.lock
