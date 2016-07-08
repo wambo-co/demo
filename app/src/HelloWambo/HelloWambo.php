@@ -3,9 +3,9 @@ namespace Wambo\HelloWambo;
 
 use Slim\Http\Response;
 use Wambo\Core\App;
-use Wambo\Core\Module;
+use Wambo\Core\Module\ModuleBootstrapInterface;
 
-class HelloWambo implements Module
+class HelloWambo implements ModuleBootstrapInterface
 {
     /**
      * @var \Wambo\Core\App|App
@@ -17,7 +17,7 @@ class HelloWambo implements Module
      */
     public function __construct(App $app)
     {
-        $app->get('/', function ($request, $response, $args) {
+        $app->get('/hello', function ($request, $response, $args) {
             /** @var $response Response */
             $response->write("Hello Wambo!");
             return $response;
