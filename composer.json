@@ -28,14 +28,5 @@
     "wambo/module-test": "dev-develop",
     "wambo/wambo-composer-installer": "dev-develop"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url":  "git@bitbucket.org:wambo-enterprice/wambo-composer-installer.git"
-    },
-    {
-      "type": "vcs",
-      "url":  "git@bitbucket.org:wambo-enterprice/wambo-module-test.git"
-    }
-  ]
+  "repositories": []
 }
