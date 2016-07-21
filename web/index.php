@@ -1,8 +1,6 @@
 <?php
 namespace Wambo\Core;
 
-use Wambo\HelloWambo\HelloWambo;
-
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -23,8 +21,4 @@ $bootstrap_di_file = WAMBO_ROOT_DIR . '/app/src/bootstrap.php';
 require_once $bootstrap_di_file;
 
 $app = new App($container);
-
-// init modules
-new HelloWambo($app);
-
 $app->run();

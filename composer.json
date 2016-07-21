@@ -26,11 +26,10 @@
     }
   },
   "require": {
-    "slim/slim": "^3.0",
-    "slim/php-view": "2.1.0",
-    "wambo/module-core": "dev-feature/base",
-    "wambo/module-test": "dev-feature/improvements",
-    "wambo/wambo-composer-installer": "dev-feature/improvements"
+    "slim/slim": "v3.4.2",
+    "wambo/module-core": "dev-develop",
+    "wambo/module-test": "dev-develop",
+    "wambo/wambo-composer-installer": "dev-develop"
   },
   "require-dev": {
     "phpunit/phpunit": "5.4.*"
