@@ -2,9 +2,10 @@
   "name": "wambo/demo",
   "description": "a demo store with the wambo system",
   "type": "project",
+  "license": "Apache-2.0",
   "authors": [
     {
-      "name": "Rene Penner",
+      "name": "René Penner",
       "email": "rene@penner.name",
       "role": "Developer"
     },
@@ -20,13 +21,19 @@
     }
   },
   "autoload-dev": {
-    "psr-4": { "Wambo\\Tests\\": "app/tests" }
+    "psr-4": {
+      "Wambo\\Tests\\": "app/tests"
+    }
   },
   "require": {
-    "slim/slim": "^3.0",
-    "slim/php-view": "2.1.0",
+    "slim/slim": "v3.4.2",
+    "wambo/module-core": "dev-develop",
     "wambo/module-test": "dev-develop",
     "wambo/wambo-composer-installer": "dev-develop"
   },
-  "repositories": []
+  "require-dev": {
+    "phpunit/phpunit": "5.4.*"
+  },
+  "repositories": [
+  ]
 }
