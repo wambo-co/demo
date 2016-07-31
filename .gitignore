@@ -1,6 +1,8 @@
 /vendor/
 /config/wambo/modules.json
 
-
 .idea
 composer.lock
+
+/logs/dev/trace/
+!/logs/dev/trace/.gitkeep

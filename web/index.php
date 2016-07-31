@@ -16,9 +16,5 @@ if (!file_exists($autoload_filename)) {
 
 require_once $autoload_filename;
 
-// load bootstrap DI configuration
-$bootstrap_di_file = WAMBO_ROOT_DIR . '/app/src/bootstrap.php';
-require_once $bootstrap_di_file;
-
-$app = new App($container);
+$app = new App(WAMBO_ROOT_DIR . '/app/src/config.php');
 $app->run();
