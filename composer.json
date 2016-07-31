@@ -31,6 +31,7 @@
     "wambo/module-cart": "dev-feature/base",
     "wambo/module-test": "dev-develop",
     "wambo/module-frontend": "dev-feature/cart",
+    "wambo/module-performance-tester": "dev-develop",
     "wambo/wambo-composer-installer": "dev-develop",
     "tedivm/stash": "^0.14.1",
     "php-di/slim-bridge": "^1.0"
@@ -39,5 +40,6 @@
     "phpunit/phpunit": "5.4.*"
   },
   "repositories": [],
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
