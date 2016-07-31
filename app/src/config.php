@@ -8,15 +8,13 @@ use Wambo\Core\Module\ModuleMapper;
 use Wambo\Core\Module\ModuleRepository;
 
 return [
-    'settings' => [
-        'httpVersion' => '2.0',
-        'responseChunkSize' => 4096,
-        'outputBuffering' => 'append',
-        'determineRouteBeforeAppMiddleware' => false,
-        'displayErrorDetails' => true,
-        'addContentLengthHeader' => true,
-        'routerCacheFile' => false,
-    ],
+    'settings.httpVersion' => '1.1',
+    'settings.responseChunkSize' => 4096,
+    'settings.outputBuffering' => 'append',
+    'settings.determineRouteBeforeAppMiddleware' => false,
+    'settings.displayErrorDetails' => true,
+    'settings.addContentLengthHeader' => true,
+    'settings.routerCacheFile' => false,
     'filesystem_adapter' => function ($c) {
         return new Local(WAMBO_ROOT_DIR);
     },
