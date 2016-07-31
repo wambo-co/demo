@@ -9,6 +9,8 @@ services:
       - php
     volumes_from:
       - php
+    volumes:
+      - ./logs/nginx:/var/log/nginx
     command: nginx -c /var/www/html/config/nginx/nginx.conf
 
   php:

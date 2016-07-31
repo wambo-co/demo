@@ -6,3 +6,6 @@ composer.lock
 
 /logs/dev/trace/
 !/logs/dev/trace/.gitkeep
+
+/logs/nginx
+!/logs/nginx/.gitkeep
