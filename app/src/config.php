@@ -13,6 +13,8 @@ use Wambo\Catalog\ProductRepositoryInterface;
 use Wambo\Core\Module\JSONModuleStorage;
 use Wambo\Core\Module\ModuleMapper;
 use Wambo\Core\Module\ModuleRepository;
+use Wambo\Cart\Service\Storage\CartRepositoryInterface;
+use Wambo\Cart\Service\Storage\CartRepository;
 
 return [
     'settings.httpVersion' => '1.1',
@@ -57,6 +59,12 @@ return [
         // create a cached version of the product repository
         $cachedProductRepository = new CachedProductRepository($cache, $productRepository);
         return $cachedProductRepository;
+    },
+
+    // Cart Repository
+    CartRepositoryInterface::class => function (Filesystem $filesystem) {
+        $cartStorage = new JSONModuleStorage($filesystem, "var/carts.json");
+        return new CartRepository($cartStorage);
     },
 
 ];
