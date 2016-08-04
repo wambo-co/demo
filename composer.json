@@ -27,7 +27,7 @@
   },
   "require": {
     "slim/slim": "v3.4.2",
-    "wambo/module-core": "v0.2.0",
+    "wambo/module-core": "dev-feature/cart",
     "wambo/module-cart": "dev-feature/base",
     "wambo/module-test": "dev-develop",
     "wambo/module-frontend": "dev-feature/cart",
